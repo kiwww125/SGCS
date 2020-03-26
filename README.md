@@ -1,2 +1,3 @@
-# SGCS
-courses in Sogang Computer Science
+# Sogang Computer Science courses
+
+* courses in Sogang Computer Science
