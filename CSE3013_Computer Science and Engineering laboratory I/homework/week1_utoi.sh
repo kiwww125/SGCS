@@ -12,6 +12,7 @@ else
 		cd $directory
 	else 
 		echo "ERROR : cannot access given directory"
+		exit 0
 	fi	
 fi
 
