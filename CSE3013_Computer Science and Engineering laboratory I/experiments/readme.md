@@ -5,7 +5,7 @@
 
 ### 주차별 실습 내용
 
-* week1 
-  UNIX Shell script를 통해 주소록 검색 쿼리를 처리합니다.
+* 1 주차
+> UNIX Shell script를 통해 주소록 검색 쿼리를 처리합니다.
   
   
