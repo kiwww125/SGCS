@@ -6,3 +6,7 @@
 
 
 ## 수강중인 과목
+
+|과목명|과목코드|비고|
+|------|------|---|
+|[컴퓨터 공학 실험 I](https://github.com/kiwww125/SGCS/tree/master/CSE3013_Computer%20Science%20and%20Engineering%20laboratory%20I)  |CSE3030| Unix 환경에서 shell programming, C programming을 연습|
