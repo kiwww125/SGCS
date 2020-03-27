@@ -20,6 +20,6 @@ for filename in *
 do
 	if [ -f $filename ]
 	then 
-		mv $filename filename | tr '[A-Z][a-z]' '[a-z][A-Z]'	
+		mv $filename `echo $filename | tr '[A-Z][a-z]' '[a-z][A-Z]'`	
 	fi
 done
