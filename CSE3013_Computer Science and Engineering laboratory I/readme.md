@@ -8,6 +8,4 @@ CSE3013_Computer Science and Engineering laboratory I
 
 * project codes
 
-* pre-report
-
-* post-report
+* report
