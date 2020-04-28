@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]
+then 
+	echo "Usage: phone search for [...search for]"
+	echo "(You didn't tell me what you wnat to search for.)"
+else
+	parm=""
+	for arg in "$@"; 
+	do
+		if [ -z ${parm}]
+		then
+			parm="$arg"	
+		else
+			parm="${parm}|${arg}"
+		fi	
+	done
+	egrep -i "$parm" mydata | awk 'BEGIN {FS="|";} {print "------->\n" "name : " $1 "\naddress: " $2 "\nphone: " $3 "\n<--------"}'
+fi
