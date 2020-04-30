@@ -247,7 +247,7 @@ int CheckToMove(char f[HEIGHT][WIDTH],int currentBlock,int blockRotate, int bloc
 				y = blockY + i, x = blockX + j;
 				//boundary
 				if(x < 0 || WIDTH <= x || y >= HEIGHT) flag= 0;
-				//field? f ? preset check
+				//field preset check
 				else if(f[y][x] == 1) flag = 0;
 			}
 		}
@@ -312,7 +312,10 @@ void BlockDown(int sig){
 		DrawBlock(blockY, blockX, nextBlock[0], blockRotate, ' ');
 	}
 	else {
-		if(blockY == -1) gameOver = 1;
+		if(blockY == -1){
+			gameOver = 1;
+			DrawBlock(blockY, blockX, nextBlock[0], blockRotate, ' ');
+		}
 		else{
 			AddBlockToField(field, nextBlock[0], blockRotate, blockY, blockX);
 			score += DeleteLine(field);
@@ -346,10 +349,10 @@ void AddBlockToField(char f[HEIGHT][WIDTH],int currentBlock,int blockRotate, int
 
 int DeleteLine(char f[HEIGHT][WIDTH]){
 	// user code
-	int del = 0, i, j, k,m;
 	//1. 필드를 탐색하여, 꽉 찬 구간이 있는지 탐색한다.
 	//2. 꽉 찬 구간이 있으면 해당 구간을 지운다. 즉, 해당 구간으로 필드값을 한칸씩 내린다.
 
+	int del = 0, i, j, k,m;
 	for(i =0; i < HEIGHT; i++){
 		for(j = 0; j < WIDTH; j++){
 			if(f[i][j] == 0) break;
